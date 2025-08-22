@@ -1,0 +1,107 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+}
+
+header {
+    background-color: darkgrey;
+    background: linear-gradient(rgba(211, 211, 211, 0.382));
+    max-width: 600px;
+    border-radius: 8px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+body {
+    background-image: url(../img/backgorund.jpg);
+}
+
+h1,
+h2,
+h3,
+p {
+    color: white;
+    text-align: center;
+    padding: 5px;
+background: #1a1a1a51;
+text-shadow: 0 0 15px rgba(255, 255, 255, 0.233), 0 0 10px rgba(255, 255, 255, 0.425);
+}
+
+.container {
+    background-color: lightgrey;
+    background: linear-gradient(rgba(211, 211, 211, 0.382));
+    max-width: 600px;
+    margin: 0 auto;
+    color: black;
+    border-radius: 8px;
+}
+
+.menu {
+    min-width: 500px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.menu li {}
+
+.menu a {
+    margin: 20px;
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: grey;
+    color: lightgrey;
+
+
+
+}
+
+.menu a:hover {
+    background-color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-left: 5px;
+    padding: 5px;
+}
+
+button {
+    display: block;
+    background-color: rgba(169, 169, 169, 0.559);
+    min-width: 200px;
+    margin: 0 auto;
+    color: rgb(15, 15, 15);
+    border-radius: 50px;
+    height: 30px;
+    font-size: 25px;
+    margin-top: 15px;
+    box-shadow: rgba(99, 99, 239, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border: none;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+footer {
+    background-color: darkgrey;
+    background: linear-gradient(rgba(211, 211, 211, 0.719));
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
