@@ -16,6 +16,6 @@ A cada versão, aplico algo novo que aprendi e documentei aqui.
 
 - **v001** → Formulário básico com comparação de email e senha  
 - **v002** → Validação de campos vazios  
-- **v003** → Senha mínima de 8 caracteres  
+- **v003** → Validação de e-mail com '@' e '.com', telefone e senha mínima  
 - **v004** → Melhoria na lógica e uso do `.trim()`  
-- **v005** → (Próximo: validação simples de email com `@`)
+- **v005** → (Próximo: validação simples de email mais avançada,permitir outros sufixos)
