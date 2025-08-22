@@ -19,7 +19,7 @@ function confirmar() {
         alert(campovazio)
         return
     }
-    if (senha.length <8|| csenha.length < 8) {
+    if (senha.length < 8 || csenha.length < 8) {
         alert(senhacurta)
         return
     }
@@ -33,7 +33,6 @@ function confirmar() {
     else {
         alert(semsucesso)
         document.getElementById("cadastrook").innerHTML = semsucesso
-
         return
     }
 
