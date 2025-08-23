@@ -32,38 +32,53 @@
     </header>
 
     <main class="container">
-
         <h2>Cadastro</h2>
         <p>Insira seus dados corretamente e confira antes de finalizar.</p>
 
-
         <div class="cadastro">
-            <form action="#">
+
+            <form id="form-cadastro" onsubmit="return false;">
                 <label for="nome">Nome</label>
                 <input id="nome" type="text" placeholder="Seu primeiro nome">
+                <!-- ID único para a mensagem de erro do nome -->
+                <p id="erro-nome" class="mensagem-erro"></p>
 
                 <label for="sobrenome">Sobrenome</label>
                 <input id="sobrenome" type="text" placeholder="Escreva seu sobrenome completo">
+                <!-- ID único para a mensagem de erro do sobrenome -->
+                <p id="erro-sobrenome" class="mensagem-erro"></p>
 
                 <label for="telefone">Telefone</label>
                 <input id="telefone" type="tel" placeholder="Seu telefone">
+                <!-- ID único para a mensagem de erro do telefone -->
+                <p id="erro-telefone" class="mensagem-erro"></p>
 
                 <label for="email">E-mail</label>
                 <input id="email" type="email" placeholder="Seu melhor E-mail">
+                <!-- ID único para a mensagem de erro do e-mail -->
+                <p id="erro-email" class="mensagem-erro"></p>
 
                 <label for="cemail">Confirmar E-mail</label>
                 <input id="cemail" type="email" placeholder="Confirme seu e-mail">
+                <!-- ID único para a mensagem de erro da confirmação de e-mail -->
+                <p id="erro-cemail" class="mensagem-erro"></p>
 
-                <label for="pass">Senha</label>
-                <input id="password" type="password" placeholder="Letras, números e símbolos">
+                <label for="password">Senha</label>
+                <input id="password" type="password" placeholder="Mínimo 8 caracteres">
+                <!-- ID único para a mensagem de erro da senha -->
+                <p id="erro-senha" class="mensagem-erro"></p>
 
-                <label for="cpass">Confirmar Senha</label>
+                <label for="cpassword">Confirmar Senha</label>
                 <input id="cpassword" type="password" placeholder="Confirme sua senha">
+                <!-- ID único para a mensagem de erro da confirmação de senha -->
+                <p id="erro-csenha" class="mensagem-erro"></p>
 
-                <button onclick="confirmar()">Cadastrar</button>
+                <!-- Trocamos o onclick por um type="submit" que é mais correto para formulários -->
+                <button type="submit">Cadastrar</button>
             </form>
         </div>
-        <p id="cadastrook">Aguardando confirmação</p>
+        <!-- ID único para a mensagem final -->
+        <p id="mensagem-final"></p>
     </main>
 
     <footer id="rodape">
@@ -74,7 +89,7 @@
                     <li><a href="#">Sobre</a></li>
                 </ul>
             </nav>
-            </div>
+        </div>
         <p>MeuSite.com - Todos os direitos reservados &copy;</p>
     </footer>
     <script src="script/javascript.js"></script>
