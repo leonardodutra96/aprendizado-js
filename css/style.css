@@ -1,206 +1,142 @@
-/* --- ESTILOS GERAIS E RESET --- */
+        /* --- ESTILOS GERAIS E RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
 
-/* O seletor universal (*) é usado para aplicar regras básicas a TODOS os elementos */
-* {
-    margin: 0;
-    /* Remove margens externas padrão */
-    padding: 0;
-    /* Remove preenchimentos internos padrão */
-    box-sizing: border-box;
-    /* Faz com que padding e border não aumentem o tamanho final do elemento */
-    text-decoration: none;
-    /* Remove o sublinhado de links */
-    list-style: none;
-    /* Remove as bolinhas de listas */
-}
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            padding: 20px;
+        }
 
-/* --- MENU DE NAVEGAÇÃO (NOVO) --- */
+        /* --- LAYOUT PRINCIPAL (HEADER, MAIN, FOOTER) --- */
+        header,
+        main.container,
+        footer {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-header nav {
-    margin-top: 20px;
-    /* Espaço entre o parágrafo e o menu */
-    border-top: 1px solid #dddfe2;
-    /* Linha sutil para separar o menu do título */
-    padding-top: 15px;
-    /* Espaço acima dos links do menu */
-}
+        /* --- TIPOGRAFIA (TÍTULOS E PARÁGRAFOS) --- */
+        h1,
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #1c1e21;
+        }
 
-header nav ul {
-    display: flex;
-    /* Coloca os itens do menu em linha */
-    justify-content: center;
-    /* Centraliza os itens do menu */
-    gap: 15px;
-    /* Espaço entre os itens do menu */
-}
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #606770;
+        }
+        
+        /* O parágrafo do rodapé precisa de menos margem */
+        footer p {
+            margin-bottom: 0;
+            margin-top: 15px;
+        }
 
-header nav a {
-    padding: 8px 15px;
-    /* Espaçamento interno dos links */
-    color: #606770;
-    /* Cor do texto do menu */
-    font-weight: bold;
-    /* Texto em negrito */
-    border-radius: 6px;
-    /* Bordas arredondadas */
-    transition: background-color 0.3s ease, color 0.3s ease;
-    /* Transição suave para o efeito hover */
-}
+        /* --- MENU DE NAVEGAÇÃO (CABEÇALHO E RODAPÉ) --- */
+        
+        /* Aplicando o mesmo estilo para o nav do header E do footer */
+        header nav,
+        footer nav {
+            margin-top: 20px;
+            border-top: 1px solid #dddfe2;
+            padding-top: 15px;
+        }
 
-header nav a:hover {
-    background-color: #f0f2f5;
-    /* Fundo cinza claro ao passar o mouse */
-    color: #1c1e21;
-    /* Cor do texto mais escura ao passar o mouse */
-}
+        /* Aplicando o mesmo estilo para a lista (ul) de ambos os menus */
+        header nav ul,
+        footer nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
 
-/* Estilos aplicados ao body ou corpo da página */
-body {
-    background-image: url(../img/backgorund.jpg);
+        /* Aplicando o mesmo estilo para os links (a) de ambos os menus */
+        header nav a,
+        footer nav a {
+            padding: 8px 15px;
+            color: #606770;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-    font-family: "Roboto", sans-serif;
-    /* Define a fonte principal para todo o site */
-    background-color: #f0f2f5;
-    /* Um cinza claro para o fundo */
-    color: #333;
-    /* Cor de texto padrão (cinza escuro), para bom contraste */
-    padding: 20px;
-    /* Adiciona uma folguinha nas laterais da página */
-}
+        /* Aplicando o mesmo efeito hover para os links de ambos os menus */
+        header nav a:hover,
+        footer nav a:hover {
+            background-color: #4e8ceb; /* Sua nova cor de hover */
+            color: #ffffff; /* Ajustei a cor do texto para branco para dar mais contraste */
+        }
 
-/* --- LAYOUT PRINCIPAL (HEADER, MAIN, FOOTER) --- */
 
-/* Estilo para o cabeçalho, container principal e rodapé */
-header,
-main.container,
-footer {
-    max-width: 600px;
-    /* Define uma largura máxima para o conteúdo não ficar muito largo */
-    margin: 20px auto;
-    /* Centraliza o container na tela (auto nas laterais) e adiciona espaço entre eles */
-    padding: 20px;
-    /* Espaçamento interno para o conteúdo não colar nas bordas */
-    background-color: #ffffff;
-    /* Fundo branco para destacar o conteúdo */
-    border-radius: 8px;
-    /* Bordas arredondadas para um visual mais limpo */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Sombra leve para dar profundidade */
-}
+        /* --- FORMULÁRIO --- */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-/* --- (TÍTULOS E PARÁGRAFOS) --- */
+        label {
+            font-weight: bold;
+            margin-bottom: -10px;
+        }
 
-h1,
-h2 {
-    text-align: center;
-    /* Centraliza os títulos */
-    margin-bottom: 10px;
-    /* Adiciona um espaço abaixo dos títulos */
-    color: #1c1e21;
-    /* Cor mais escura para os títulos */
-}
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 16px;
+        }
 
-p {
-    text-align: center;
-    /* Centraliza os parágrafos */
-    margin-bottom: 20px;
-    /* Espaço maior abaixo dos parágrafos */
-    color: #606770;
-    /* Cor de texto um pouco mais clara para parágrafos */
-}
+        button[type="submit"] {
+            padding: 12px 20px;
+            background-color: #1877f2;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-/* --- FORMULÁRIO --- */
+        button[type="submit"]:hover {
+            background-color: #166fe5;
+        }
 
-/* Estilo para a tag <form> */
-form {
-    display: flex;
-    /* Ativa o layout flexbox */
-    flex-direction: column;
-    /* Organiza os itens do formulário em uma coluna */
-    gap: 15px;
-    /* Cria um espaço de 15px entre cada item do formulário (labels, inputs, etc) */
-}
+        /* --- MENSAGENS DE FEEDBACK (ERRO E SUCESSO) --- */
+        #mensagem-final {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 15px;
+        }
 
-/* Estilo para as etiquetas <label> */
-label {
-    font-weight: bold;
-    /* Deixa o texto da label em negrito */
-    margin-bottom: -10px;
-    /* Reduz o espaço abaixo da label, aproximando do input */
-}
+        .mensagem-erro {
+            color: #dc3545;
+            font-size: 14px;
+            min-height: 20px;
+            text-align: left;
+            margin: -10px 0 0 5px;
+        }
 
-/* Estilo para os campos de texto, e-mail, telefone e senha */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="password"] {
-    width: 100%;
-    /* Faz o campo ocupar 100% da largura do formulário */
-    padding: 12px;
-    /* Espaçamento interno para o texto não colar nas bordas */
-    border: 1px solid #dddfe2;
-    /* Borda sutil */
-    border-radius: 6px;
-    /* Bordas arredondadas */
-    font-size: 16px;
-    /* Tamanho da fonte do texto digitado */
-}
-
-/* Estilo para o botão de cadastro */
-button[type="submit"] {
-    padding: 12px 20px;
-    /* Espaçamento interno */
-    background-color: #1877f2;
-    /* Cor de fundo azul */
-    color: white;
-    /* Cor do texto */
-    font-size: 18px;
-    /* Tamanho da fonte */
-    font-weight: bold;
-    /* Texto em negrito */
-    border: none;
-    /* Remove a borda padrão */
-    border-radius: 6px;
-    /* Bordas arredondadas */
-    cursor: pointer;
-    /* Mostra a "mãozinha" ao passar o mouse */
-    transition: background-color 0.3s ease;
-    /* Efeito suave de transição na cor de fundo */
-}
-
-/* Efeito visual quando o mouse está sobre o botão */
-button[type="submit"]:hover {
-    background-color: #166fe5;
-    /* Um tom de azul um pouco mais escuro */
-}
-
-/* --- MENSAGENS DE ERRO E SUCESSO --- */
-
-/* Estilo base para todas as mensagens de feedback */
-#mensagem-final {
-    text-align: center;
-    font-size: 16px;
-    margin-top: 15px;
-}
-
-/* Estilo para as mensagens de erro abaixo de cada campo */
-.mensagem-erro {
-    color: #dc3545;
-    /* Vermelho para indicar erro */
-    font-size: 14px;
-    /* Fonte um pouco menor */
-    min-height: 20px;
-    /* Garante que o layout não "pule" quando a mensagem aparece */
-    text-align: left;
-    /* Alinha o texto do erro à esquerda */
-    margin: -10px 0 0 5px;
-    /* Ajusta a posição para ficar mais perto do input */
-}
-
-/* Estilo para a mensagem final de sucesso */
-.mensagem-sucesso {
-    color: #28a745;
-    /* Verde para indicar sucesso */
-    font-weight: bold;
-    /* Texto em negrito */
-}
+        .mensagem-sucesso {
+            color: #28a745;
+            font-weight: bold;
+        }
